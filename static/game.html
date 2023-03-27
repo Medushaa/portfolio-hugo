@@ -1,0 +1,110 @@
+<html>
+    <p>Arcade Game using Javascript</p>
+
+    
+    <canvas id="gameCanvas" width="800"
+    height="600">
+    <!-- create a canvus for graphics element -->
+
+    </canvas>
+
+    <script>
+        var canvas; //hold the dimensions of canvas
+        var canvasContext; //hold graphical info
+
+        var ballX = 50;
+        var ballSpeedX = 15;
+        var ballY = 50;
+        var ballSpeedY = 4;
+
+        var paddle1Y = 250;
+        var paddle2Y = 250;
+        var PADDLE_HEIGHT = 100;
+        const PADDLE_THIC = 10;
+
+        var score = 0;
+
+        function calculateMousePos(evt) {
+            var rect = canvas.getBoundingClientRect(); //the canvas area
+            var root = document.documentElement;
+            var mouseX = evt.clientX - rect.left - root.scrollLeft; //how much scrolled
+            var mouseY = evt.clientY - rect.top - root.scrollTop;
+            return {
+                x:mouseX,
+                y:mouseY
+            }
+        }
+
+        window.onload = function(){ //runs the function when the screen loads
+            console.log("H")
+            canvas = document.getElementById('gameCanvas');
+            canvasContext = canvas.getContext('2d');
+
+            var framesPerSecond = 30;
+
+            setInterval(function() {
+                moveEveryth();
+                drawEveryth();
+            }, 1000/framesPerSecond); 
+
+            canvas.addEventListener('mousemove', function(evt) {
+                var mousePos = calculateMousePos(evt);
+                paddle1Y = mousePos.y - (PADDLE_HEIGHT/2); //getting mouse y postion and move center of paddle
+            });
+        }
+
+        function ballReset(){
+            ballSpeedX = -ballSpeedX;
+            ballX = canvas.width/2; //ball resets back to center
+            ballY = canvas.height/2;
+            score = 0;
+        }
+
+        function moveEveryth(){
+            ballX = ballX + ballSpeedX; //moves ball every frame
+            if (ballX < 20) { 
+                if (ballY > paddle1Y && ballY < paddle1Y+PADDLE_HEIGHT){
+                    ballSpeedX = -ballSpeedX; //bounce off paddle
+                    score += 1
+
+                }else{
+                    ballReset(); //resets when paddle missed
+                }
+                
+                
+            }
+            if (ballX > canvas.width-20) { //when ball at border
+             //bounces
+                ballSpeedX = -ballSpeedX;
+            }
+
+            ballY = ballY + ballSpeedY; //moves ball every frame
+            if ((ballY > canvas.height-10) || (ballY < 10)) { //when ball at border
+                ballSpeedY = -ballSpeedY //bounces
+            }
+            paddle2Y = ballY - (PADDLE_HEIGHT/2)
+        }
+
+        function drawEveryth(){
+            //bqckground rectangle
+            canvasContext.fillStyle = 'black';
+            canvasContext.fillRect(0,0,canvas.width,canvas.height); //rect top left to bottom right
+
+            canvasContext.fillStyle = 'white'; //paddle 1
+            canvasContext.fillRect(0,paddle1Y,PADDLE_THIC,100); //moves with mouse
+
+            canvasContext.fillStyle = 'white'; //paddle 2
+            canvasContext.fillRect(canvas.width-10,paddle2Y,PADDLE_THIC,100); //moves with mouse
+
+            canvasContext.fillStyle = 'red'; //ball
+            canvasContext.beginPath();
+            canvasContext.arc(ballX,ballY,10,0,Math.PI*2, true); //draws cord r=10, 0 to 2pi
+            canvasContext.fill(); //fills up the arc
+
+            canvasContext.font = '30px Arial';
+            canvasContext.fillStyle = 'white'; 
+            canvasContext.fillText(score,canvas.width/2, canvas.height/4)
+
+        }
+    </script>
+</html>
