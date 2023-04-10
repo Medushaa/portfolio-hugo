@@ -87,7 +87,7 @@ Find a interger *n* such that it is a quadratic non-residue of mod p and define 
 $$c=n^t$$
 $$A=a \text{ and } b=1$$
 
-$$\text{You can calculate } c^{-1} \text{  too for later use.} $$
+$$\text{You can calculate } c^{-1} \text{  (mod p) too for later use.} $$
 Now for the looping part of the algorithm. Starting from k = 2 to s. For each iteration, check if:
 > $$A^{{(p-1)}/{2^k}} \equiv 1 \ (mod \ p)$$
 If yes: *continue loop (k increases by 1)* \
