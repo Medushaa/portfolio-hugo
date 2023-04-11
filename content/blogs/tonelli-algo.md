@@ -91,12 +91,14 @@ $$\text{You can calculate } c^{-1} \text{  (mod p) too for later use.} $$
 Now for the looping part of the algorithm. Starting from k = 2 to s. For each iteration, check if:
 > $$A^{{(p-1)}/{2^k}} \equiv 1 \ (mod \ p)$$
 If yes: *continue loop (k increases by 1)* \
-If no: *update as below and reset loop to k=2*
-$$A=Ac^{-2^{k-1}} \text{ and } b=bc^{2^{k-2}}$$ 
+If no: *update as below and loop*
+$$A=A(c^{-1})^{2^{k-1}} \text{ and } b=bc^{2^{k-2}}$$ 
 
 Stop the iterations when A becomes 1. Our answer will be,
-> $$x=\pm b \ (mod \ p)$$
+> $$x=\pm \ b \ (mod \ p)$$
 
+If loop ended at k=s and A is not 1 yet, our answer will be,
+> $$x=\pm \ bA^{(t+1)/2} \ (mod \ p)$$
 <hr>
 
 Thanks for reading. hehe. I'm probably the only one reading... coz these are basically my notes. Good night, me.
