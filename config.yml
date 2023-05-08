@@ -4,7 +4,7 @@ title: "Masu Portfolio"
 theme: hugo-profile
 
 Paginate: 3
-disqusShortname: medusha
+disqusShortname: masu-portfolio
 
 markup:
   goldmark:

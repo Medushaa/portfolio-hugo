@@ -88,11 +88,11 @@ $$c=n^t$$
 $$A=a \text{ and } b=1$$
 
 $$\text{You can calculate } c^{-1} \text{  (mod p) too for later use.} $$
-Now for the looping part of the algorithm. Starting from k = 2 to s. For each iteration, check if:
-> $$A^{{(p-1)}/{2^k}} \equiv 1 \ (mod \ p)$$
+Now for the looping part of the algorithm. Starting from k = 1 to s (exclusive). For each iteration, check if:
+> $$A^{{(p-1)}/{2^{k+1}}} \equiv 1 \ (mod \ p)$$
 If yes: *continue loop (k increases by 1)* \
-If no: *update as below and loop*
-$$A=A(c^{-1})^{2^{k-1}} \text{ and } b=bc^{2^{k-2}}$$ 
+If no: *update as below and loop (k increases by 1)*
+$$A=A(c^{-1})^{2^{k}} \text{ and } b=bc^{2^{k-1}}$$ 
 
 Stop the iterations when A becomes 1. Our answer will be,
 > $$x=\pm \ b \ (mod \ p)$$
