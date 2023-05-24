@@ -7,7 +7,7 @@ tags:
   - Grades
   - BracU
 image: /images/study.jpg
-description: "Courses taking at Brac University in CSE and Mathematics double major since Spring 2020"
+description: "Courses taken at Brac University in CSE and Mathematics double major since Spring 2020"
 toc: 
 ---
 
