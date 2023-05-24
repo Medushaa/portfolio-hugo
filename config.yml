@@ -261,8 +261,8 @@ params:
         content: A cute pastel website with moving 3D objects in the background that can be interacted with by scrolling.
         image: /images/threeJs.jpg
         featured:
-          name: Demo
-          link: 
+          name: Site link
+          link: https://three-js-pastel-site.netlify.app/
         # badges:
         #   - "Hugo"
         #   - "Bootstrap"
@@ -301,6 +301,19 @@ params:
         links:
           - icon: fab fa-behance
             url: https://www.behance.net/masudarahman
+
+
+      - title: Note sharing Website
+        content: |
+          It's a website where people can login and share notes as links or pdf. Also they can like and comment these posts.
+          This was done with Laravel.
+        image: /images/laravel.png
+        # featured:
+        #   name: Behance Profile
+        #   link: https://www.behance.net/masudarahman
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Medushaa/Note-sharing-site-CSE470
 
 
   #Contact

@@ -12,6 +12,7 @@ toc:
 ---
 
 Courses taken at Brac University in CSE and Mathematics double major since Spring 2020 till now: <br>
+...............................................................................................
 
 
 
