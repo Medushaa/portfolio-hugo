@@ -1,13 +1,12 @@
-<!-- ---
-title: "Search for Job"
-date: 2022-08-04T22:53:58+05:30
+---
+title: "Masu Grades"
+date: 2023-05-24T22:53:58+05:30
 draft: false
-#github_link: "https://github.com/gurusabarish/hugo-profile"
+github_link: "https://github.com/gurusabarish/hugo-profile"
 author: "Medusha"
 tags:
-  - Jobs
-  - CS
-  - art
+  - Grades
+  - BracU
 image: /images/grades.jpg
 description: ""
 toc: 
@@ -31,4 +30,4 @@ The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference
 .emoji {
   font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
 }
-``` -->
+```

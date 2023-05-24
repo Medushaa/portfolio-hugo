@@ -1,0 +1,296 @@
+[
+ {
+   "Course Code": "CSE110",
+   "Course Name": "PROGRAMMING LANGUAGE I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "ENG101",
+   "Course Name": "FUNDAMENTALS OF ENGLISH",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT110",
+   "Course Name": "MATHEMATICS I: DIFFERENTIAL CALCULUS & COORDINATE GEOMETRY",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "PHY111",
+   "Course Name": "PRINCIPLES OF PHYSICS I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "ANT101",
+   "Course Name": "INTRODUCTION TO ANTHROPOLOGY",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE230",
+   "Course Name": "DISCRETE MATHEMATICS",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT123",
+   "Course Name": "CALCULUS I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT222",
+   "Course Name": "DIFFERENTIAL EQUATIONS I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "STA201",
+   "Course Name": "ELEMENTS OF STATISTICS AND PROBABILITY",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE111",
+   "Course Name": "PROGRAMMING LANGUAGE-II",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT212",
+   "Course Name": "LINEAR ALGEBRA",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT322",
+   "Course Name": "DIFFERENTIAL EQUATIONS II",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "PHY112",
+   "Course Name": "PRINCIPLES OF PHYSICS II",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "BNG103",
+   "Course Name": "BANGLA LANGUAGE AND LITERATURE",
+   "Grade": "B",
+   "CGPA": 3
+ },
+ {
+   "Course Code": "CSE220",
+   "Course Name": "DATA STRUCTURES",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "EMB101",
+   "Course Name": "EMERGENCE OF BANGLADESH",
+   "Grade": "B+",
+   "CGPA": 3.3
+ },
+ {
+   "Course Code": "ENG102",
+   "Course Name": "ENGLISH COMPOSITION I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "HUM103",
+   "Course Name": "ETHICS AND CULTURE",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE221",
+   "Course Name": "ALGORITHMS",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE250",
+   "Course Name": "CIRCUITS AND ELECTRONICS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE260",
+   "Course Name": "DIGITAL LOGIC DESIGN",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT211",
+   "Course Name": "CALCULUS II",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT221",
+   "Course Name": "REAL ANALYSIS I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE251",
+   "Course Name": "ELECTRONIC DEVICES AND CIRCUITS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE320",
+   "Course Name": "DATA COMMUNICATIONS",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE331",
+   "Course Name": "AUTOMATA AND COMPUTABILITY",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE370",
+   "Course Name": "DATABASE SYSTEMS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT316",
+   "Course Name": "OPERATIONS RESEARCH I",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE420",
+   "Course Name": "COMPILER DESIGN",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE471",
+   "Course Name": "SYSTEM ANALYSIS AND DESIGN",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "HUM102",
+   "Course Name": "INTRODUCTION TO PHILOSOPHY",
+   "Grade": "B",
+   "CGPA": 3
+ },
+ {
+   "Course Code": "MAT215",
+   "Course Name": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT311",
+   "Course Name": "ABSTRACT ALGEBRA",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE330",
+   "Course Name": "NUMERICAL METHODS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE340",
+   "Course Name": "COMPUTER ARCHITECTURE",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE341",
+   "Course Name": "MICROPROCESSOR",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE422",
+   "Course Name": "ARTIFICIAL INTELLIGE",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT325",
+   "Course Name": "MATHEMATICAL METHODS",
+   "Grade": "A-",
+   "CGPA": 3.7
+ },
+ {
+   "Course Code": "CSE350",
+   "Course Name": "DIGITAL ELECTRONICS AND PULSE TECHNIQUES",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE360",
+   "Course Name": "COMPUTER INTERFACING",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CST307",
+   "Course Name": "ART, COMMUNITY AND THE FUTURE",
+   "Grade": "A-",
+   "CGPA": 3.7
+ },
+ {
+   "Course Code": "MAT314",
+   "Course Name": "COMPLEX ANALYSIS",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE423",
+   "Course Name": "COMPUTER GRAPHICS",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT321",
+   "Course Name": "REAL ANALYSIS II",
+   "Grade": "B+",
+   "CGPA": 3.3
+ },
+ {
+   "Course Code": "BIO101",
+   "Course Name": "INTRODUCTION TO BIOLOGY",
+   "Grade": "A+",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "CSE470",
+   "Course Name": "SOFTWARE ENGINEERING",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT411",
+   "Course Name": "TOPOLOGY",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT422",
+   "Course Name": "THEORY OF NUMBERS",
+   "Grade": "A",
+   "CGPA": 4
+ },
+ {
+   "Course Code": "MAT469",
+   "Course Name": "MEASURE THEORY",
+   "Grade": "A",
+   "CGPA": 4
+ }
+]

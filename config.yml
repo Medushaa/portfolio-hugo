@@ -214,7 +214,8 @@ params:
         featuredLink:
           enable: true
           name: "Courses taken and Results"
-          url: "https://docs.google.com/spreadsheets/d/1a4n7q1-kpxSzgP3INtT8YbP9NQYiq7zvB9cqygihWcs/edit?usp=sharing"
+          url: "/blogs/grades"
+          # url: "https://docs.google.com/spreadsheets/d/1a4n7q1-kpxSzgP3INtT8YbP9NQYiq7zvB9cqygihWcs/edit?usp=sharing"
 
       - title: "High School"
         school:
