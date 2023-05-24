@@ -18,9 +18,11 @@ Anyways, I'll keep it short. :zap:
 
 I don't have many frends to go on hangouts for the break. So, instead I made a list of things I want to do and try before the new semester starts. Here's a litol collage of those things:
 
-![tasks collage](/images/semester-break/tasks-done.png)
+<!-- > ![tasks collage](/images/semester-break/tasks-done.png) -->
 
-<br>
+> <img src="/images/semester-break/tasks-done.png" alt="image description" style="max-width: 100%; height: auto;">
+
+
 
 1. <u>Blender</u>: just a lemon park....
 2. <u>Drawing on tablet</u>: Bought the Inifity painter app just for this...
@@ -28,9 +30,9 @@ I don't have many frends to go on hangouts for the break. So, instead I made a l
 4. <u>Make stickers</u>: I found another reason to use the app I wasted my money on. So, I drew some things that I love and now I'm waiting to print them as stickers. (iyes, i luv null sets)
 5. <u>Make cute site</u>: working on itttt
 6. <u>Godot project</u>: I followed some youtube tutorials to start it and then got stuck with how to shrink the dialogue box and gave up:
-
-
 <br>
-{{< youtube DTe7Oh6YBGw >}}
+
+> {{< youtube DTe7Oh6YBGw >}}
+
 <br>
 
