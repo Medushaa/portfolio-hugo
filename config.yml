@@ -1,7 +1,7 @@
 baseURL: ""
 languageCode: "en-us"
 title: "Masu Portfolio"
-theme: hugo-profile
+theme: ["hugo-chart", "hugo-profile"]
 
 Paginate: 3
 disqusShortname: masu-portfolio
@@ -102,7 +102,7 @@ params:
     intro: "Hi, my name is"
     title: "Masuda."
     subtitle: "An unemployed student in search of a job :("
-    content: "I like creating visually pleasing 3D art and websites for fun. Someone please hire me."
+    content: "I like creating visually pleasing 3D art and websites for fun. Someone please hire me. Or as a tutor."
     image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
     button:
       enable: true
@@ -158,6 +158,10 @@ params:
           MAT215 (Complex Variables and Laplace Transformation): Checked assignment copies and lab code submissions in 2 sections with total 80 students.
 
           MAT215 (Mathematics for Machine Learning): Same as above, plus giving consultations for 9 hours a week.
+
+          MAT222 (Differential Equations 1)
+
+          MAT205 (Numerical Analysis)
           
 
       - job: "Private tutor for O and A level Students"
@@ -314,6 +318,22 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/Medushaa/Note-sharing-site-CSE470
+
+      - title: Discord bot
+        content: |
+          A discord bot to go through assignment marks in csv file and DM the respective students. 
+          Also, can plot graphs. Coded in python.
+          
+        image: /images/discord-bot.png
+        # featured:
+        #   name: Behance Profile
+        #   link: https://www.behance.net/masudarahman
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Medushaa/st-masu-bot
+
+
+
 
 
   #Contact
