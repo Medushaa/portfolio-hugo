@@ -85,7 +85,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
    | HUM102 | INTRODUCTION TO PHILOSOPHY        | B | 3 | [Note Link](https://drive.google.com/file/d/13WHs6d2gSQB4e1V9KKRexFSGuU34aDa_/view?usp=sharing ) |
    | CST307 | ART, COMMUNITY AND THE FUTURE     | A- | 3.7 | [Note Link](https://drive.google.com/file/d/1tQ5ZzchuwsAf7MoKXypId_SKiNPkhAqD/view?usp=sharing ) |
    | BIO101 | INTRODUCTION TO BIOLOGY           | A+ | 4 | [Note Link](https://drive.google.com/file/d/1oYDwyGOaw8TJQgi8V52NIng5ptAAjmCd/view?usp=sharing ) |
-   | PSY101 | INTRODUCTION TO PSYCHOLOGY        | B+ | 3.3	 | [Note Link](https://drive.google.com/file/d/1uWQtnEgHtgL6Rc5LXWR71fB3jeNDNgFk/view?usp=sharing) |
+   | PSY101 | INTRODUCTION TO PSYCHOLOGY        | A | 4	 | [Note Link](https://drive.google.com/file/d/1uWQtnEgHtgL6Rc5LXWR71fB3jeNDNgFk/view?usp=sharing) |
 
 
 <br>
@@ -99,7 +99,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
         labels: ['A+ (4)', 'A (4)', 'A- (3.7)', 'B+ (3.3)', 'B (3)'],
         datasets: [{
             label: 'Grades',
-            data: [14, 34, 2, 3, 2],
+            data: [19, 34, 2, 3, 2],
             backgroundColor: [
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
