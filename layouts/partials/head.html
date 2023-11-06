@@ -65,9 +65,14 @@
         --secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryColor | default "#212529" }};
     }
     body {
-        font-size: {{ .Site.Params.font.fontSize | default "1rem" }};
-        font-weight: {{ .Site.Params.font.fontWeight | default "400" }};
-        line-height: {{ .Site.Params.font.lineHeight | default "1.5" }};
-        text-align: {{ .Site.Params.font.textAlign | default "left" }};
+        /*If problem, remove "--*/
+        --font-size: {{ .Site.Params.font.fontSize | default "1rem" }};
+        --font-weight: {{ .Site.Params.font.fontWeight | default "400" }};
+        --line-height: {{ .Site.Params.font.lineHeight | default "1.5" }};
+        --text-align: {{ .Site.Params.font.textAlign | default "left" }};
     }
 </style>
+
+
+
+
