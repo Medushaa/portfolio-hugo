@@ -17,25 +17,25 @@ description: "A story about one of my Number theory quizes where we had to solve
 ## <u>Story part</u>
 <hr>
 
-This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some weird sadistic reason uses the [<span style="color:blue">MIT lecture notes</span>](https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/lecture-notes/) as the main "textbook" and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place for rich dumb kids who couldn't get a chance in public Universities. TwT
+This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some sadistic reason, uses the [<span style="color:blue">MIT lecture notes</span>](https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/lecture-notes/) as the main "textbook" and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place saturated with rich dumb kids who couldn't get a chance in public Universities. TwT
 
-The 15 minute quiz syllabus had 4 lectures and so I knew the teacher was going to give only 1 math problem and none of the other topics had any big math-to-do except for the Tonelli's algorithm. So, that's where ineed to  start.
+The 15 minute quiz syllabus had 4 lectures and so I knew the teacher was going to give only 1 math problem and none of the other topics had any big math-to-do except for the Tonelli's algorithm. So, that's where i need to  start.
 
 10:00 am : Woke up and while still in bed, started going through the MIT lecture notes. Got distracted like a thousand times but still I would like to say that I did put a lot of 'time and effort' to try and understand this supplimentary text. I searched on google and found everything about some other Tonelli Shank algorithm and nothing about Tonelli's (I didn't go for the second page of google though). 
 
-6:00 pm : whaaaaaaaaah??!! DId I just waste the entire half day trying to understand just one part of one single lecture?? I started to calculate what my grade would be if I fail this quiz and ran a trailer in my head of me grinding for the finals to make up for coming loss.
+6:00 pm : whaaaaaaaaah??!! DId I just waste the entire half day trying to understand just one part of one single lecture?? I started to calculate what my grade would be if I fail this quiz and ran a trailer in my head of me grinding for the finals to make up for the coming loss.
 
-8:00 pm : (obviously I don't remember the exact times). Anyways, I wasn't gonna give up just then. This number theory teacher is one of those heartless grade destroying faculties who listens to no pleadings regarding marks (He's a sweet guy otherwise). So, I havvee to atleast try get some numbers in this quiz if I wanted to avoid any C,D,E,F,G in my gradesheet.
+8:00 pm : (obviously I don't remember the exact times). Anyways, I wasn't gonna give up just then. This number theory teacher is one of those grade destroying faculties who listens to no pleadings regarding marks (He's a sweet guy otherwise). So, I havvee to atleast try get some numbers in this quiz if I wanted to avoid any C,D,E,F,G in my gradesheet (sorry, I am indeed your typical nerd). 
 
 9:00 pm : I started looking at the Tonelli Shank Algorithm from wikipedia and solved an example with it. It was pretty easy and I had fun solving it with two of my friends on an audio call. One of them assured me that we won't need the algorithm in the lecture notes. (Meanwhile my bestfriend was grinding on previous chapters from a book he bought 7 years ago and was having some emotional nostalgic moments with it...)
 
-Next Day (8:00 am) : I confessed to sir that I didn't understand Tonelli's algorithm and asked him to help by showing him the problem that we solved last night with the not-tonilli's-algorithm. He probably didn't study the notes himself and so apologised that he can't help at the moment. And then he handed out the quiz. 
+Next Day (8:00 am) : I confessed to sir that I didn't understand Tonelli's algorithm and asked him to help by showing him the problem that we solved last night with the not-tonilli's-algorithm. He said he can't help at the moment and apologised for it TwT. And then he handed out the quiz question. 
 
-Quiz time : It was the saaaammmmeeeee question that me and my two friends practiseedd last nighttt. We looked at eachother and started laughing and sir too laughed because he too was shocked when I showed him that practice problem earlier and tried his best not to react. Maybe the shock was what blocked his math center at the time... Fortunately sir allowed us to use the other algorithm.
+Quiz time : It was the saaaammmmeeeee QUESTION that I showed him like a min agooo. Me and the friends I studied with the night before looked at eachother and started laughing. Sir also laughed because he too was shocked when I showed him that practice problem earlier and tried his best not to react. Fortunately for us, sir allowed us to use the other algorithm.
 
-Anyways... I'm bad at writing and worse at trying to make it entertaining. That was the "storytime"... (Btw, the mentioned bestfriend was not able to answer the quiz fully but he didn't seem that dissappointed after it. So, all is gut.)
+Anyways... I'm bad at writing and worse at trying to make it entertaining. That was the "storytime"... (Btw, the mentioned bestfriend wasn't able to answer the quiz fully but he didn't seem that dissappointed after it. So, all is gut.)
 
-Below I tried to summerise both the algorithms since I myself couldn't find the second one anywhere on the google search's first page. 
+Below I tried to summerise both the algorithms since I myself couldn't find the second one anywhere on the google search's first page.
 <hr>
 
 ## <u>Tonelli Shank Algorithm</u>

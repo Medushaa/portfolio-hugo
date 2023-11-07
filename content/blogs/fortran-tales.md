@@ -78,7 +78,11 @@ end program
 </br>
 
 ## <u>Lab 3 (Eular Method)</u>
-Solve the 2nd Order ODE with h=0.1 and t range [0,2]:
+Eular Method formula for 1st Order ODE:
+$$ \frac{dy}{dx}=f(x,y), \ \ \ y(x_0)=y_0$$
+$$\text{Iterate: }\ \ \hat{y}_{i+1}=y_i+h\cdot f(x_i,y_i)$$
+
+Our task was to solve a 2nd Order ODE with h=0.1 and t range [0,2]:
 $$ \frac{d^2x}{dt^2} + 25x = 0 , \ \ \  x(0)=1, \ \ \  x^′(0)=0$$
 Convert this to a system of two 1st order ODE:
 $$x^′=z , \ \ \ z^′=-25x , \ \ \   x(0)=1, \ \ \  z(0)=0$$
@@ -154,10 +158,33 @@ do i = 1, n
     z(i + 1) = z(i) + (h/2) * (g(t(i), x(i), z(i)) + g(t(i+1), x_intm, z_intm))
 end do
  ```
+The general formula for Modified Eular Method for 1st Order ODE:
+
+$$ \frac{dy}{dx}=f(x,y), \ \ \ y(x_0)=y_0$$
+
+$$ y_{i+1}=y_i+h\cdot f(x_i,y_i)$$
+
+$$ y_{i+1}=y_i + \frac{h}{2}(f(x_i,y_i)+f(x_{i+1},y_{i+1})) $$
+
+The last two lines are iterated to get each approximated point in the solution curve.
+
+
 </br>
 
 ## <u>Lab 4 (Runge Kutta 4 Method)</u>
-Just replace the iteration block with:
+The general formula for 4th order Runge Kutta method for 1st Order ODE:
+
+$$ K_1=h\cdot f(x_i,y_i) $$
+
+$$ K_2=h\cdot f \left( x_i + \frac{h}{2}, \ y_i+\frac{K_1}{2}\right)  $$
+
+$$ K_3=h\cdot f \left( x_i + \frac{h}{2}, \ y_i+\frac{K_2}{2}\right)  $$
+
+$$ K_4=h\cdot f \left( x_i + h, \ y_i+K_3\right)  $$
+
+$$ y_{i+1}=y_i+ \frac{1}{6} (K_1+2K_2 +2K_3 +K_4)  $$
+
+For the RK4 code on the same 2nd order ODE that we solved in Lab 3, we'll just replace the iteration block with:
 ```f90
 do i = 1, n
     k1_x = h*f(t(i), x(i), z(i))
@@ -187,11 +214,11 @@ See the difference? XDDD The entire y_i row became 1 for this. Have fun.
 </br>
 
 ## <u>Midterm (3rd oder ODE) </u>
-Solve this 3rd order differential equation with Modified Eular and RK4:
+Question: Solve this 3rd order differential equation with Modified Eular and RK4:
 $$\frac{d^3y}{dx^3}-\frac{d^2y}{dx^2}\sin(x)+2\frac{dy}{dx} − xy = \cos(x)$$
 $$ y(0) = 1,\ \ \   y^′(0) = −2, \ \ \   y^{′′}(0) = 3$$
 
-Convert this into a system of three 1st order ODEs:
+First convert this into a system of three 1st order ODEs:
 $$ y^′ = p$$
 $$ p^′ = q$$
 $$ q^′ = q\cdot \sin(x) - 2p +xy + \cos(x)$$
