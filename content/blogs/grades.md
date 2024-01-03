@@ -1,7 +1,7 @@
 ---
 title: "Masu Grades"
 date: 2023-05-24
-draft: true
+draft: false
 author: "Masuda"
 tags:
   - Grades
@@ -42,8 +42,10 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
    | CSE423 | COMPUTER GRAPHICS                 | A+ | 4 | [Note Link](https://drive.google.com/file/d/1K3D41ae-czn9N3RWf5euQuQUCVsCTQOr/view?usp=sharing ) |
    | CSE470 | SOFTWARE ENGINEERING              | A | 4 | [Note Link](https://drive.google.com/file/d/1nIMjio_UhBzP2mqQleZdDDuSwEaQWhLT/view?usp=sharing ) |
    | CSE437 | DATA SCIENCE                      | A+ | 4 | [Note Link](https://drive.google.com/file/d/18JjynbVoiLGM-BIQJHh_3Rdo2vPGk2I9/view?usp=sharing) |
+   | CSE460 | VLSI DESIGN                       | A+ | 4 | [Note Link](https://drive.google.com/file/d/1HoV2MaGULaIWHn-TFg--7JEUoymoG8fd/view?usp=sharing) |
    | CSE461 | INTRODUCTION TO ROBOTICS          | A+ | 4 | [Note Link](https://drive.google.com/file/d/13wzNQsX5wFYK8gmxaU9dATzmyjtIAdUv/view?usp=sharing) |
    | CSE321 | OPERATING SYSTEMS                 | A+ | 4 | [Note Link](https://drive.google.com/file/d/18baM0chapJNZ9lecwy_ZVLLZIJq8uHi-/view?usp=sharing) |
+   | CSE421 | COMPUTER NETWORKS                 | A | 4 | [Note Link](https://drive.google.com/file/d/1nMAHY30bHG4soC9qx6LleNOYHXMsW7Dd/view?usp=sharing) |
 
 ## <u>MAT courses</u>
 
@@ -67,6 +69,9 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
    | MAT469 | MEASURE THEORY                    | A | 4 | [Note Link](https://drive.google.com/file/d/1uBdwyR36s3T_XdgVGwIDHoJ3BkQ5uo0M/view?usp=sharing ) |
    | MAT323 | DYNAMICAL SYSTEMS                 | A | 4 | [Note Link](https://drive.google.com/file/d/1Kfaxy3aRd4vkh9wa44Ox2auRh_nEvf0R/view?usp=sharing ) |
    | MAT111 | PRINCIPLES OF MATHEMATICS         | A | 4 | [Note Link](https://drive.google.com/file/d/1IQTkfOA6BIJzdNWQAeKvvnviZeXVeMrD/view?usp=sharing) |
+   | MAT312 | NUMERICAL ANALYSIS II             | A+ | 4 | [Note Link](https://drive.google.com/file/d/1ALFs8GN3wOcsPU_OiiYTM1Z5RjJIDwyz/view?usp=sharing) |
+   | MAT350 | MATHEMATICS LAB II                | A | 4 | [Note Link](https://drive.google.com/file/d/1ACWAZUgw28YRoY-N6bZx7iT1uF3y9e4c/view?usp=sharing ) |
+   | MAT324 | GRAPH THEORY                      | A | 4 | [Note Link](https://drive.google.com/file/d/1_YmBbm-K6LxmF1alviDUHFdWyxD4y_yQ/view?usp=sharing) |
 
 
 ## <u>GenEd courses</u>
@@ -99,7 +104,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
         labels: ['A+ (4)', 'A (4)', 'A- (3.7)', 'B+ (3.3)', 'B (3)'],
         datasets: [{
             label: 'Grades',
-            data: [19, 34, 2, 3, 2],
+            data: [21, 37, 2, 3, 2],
             backgroundColor: [
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -134,8 +139,8 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
 
 <br>
 
-Total number of course: 55, 
-CGPA: 3.91
+Total number of course: 60, 
+CGPA: 3.92
 
 <br>
 

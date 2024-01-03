@@ -107,7 +107,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: https://docs.google.com/document/d/1iao73-bDiILhdNH6t36H3De67kZ5DX3Y/edit?usp=sharing&ouid=103941051682193088562&rtpof=true&sd=true
+      url: https://docs.google.com/document/d/18xdEILV8LsWfrV4pFT190crNUPccdL57/edit?usp=sharing&ouid=110105006431998175542&rtpof=true&sd=true
       download: true 
     socialLinks:
       fontAwesomeIcons:

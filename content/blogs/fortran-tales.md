@@ -45,7 +45,7 @@ Output:
 </br>
 
 ## <u>Lab 2 (Arrays)</u>
-Lab 1 seemed fun and easy. Not bad. So, in lab 2 I was pretty chilled and ate cake in the first 1 hour of the class. And then the tisar gave us a classwork. This task would have taken me much less than what I took if I weren't high on suger (normal cake suger).
+Lab 1 seemed fun and easy. Not bad. So, in lab 2 I was pretty chilled and ate cake in the first 1 hour of the class. And then the tisar gave us a classwork. This task would have taken me much less than what I took if I weren't high on sugar (normal cake sugar).
 
 Question: (i don't remember the exact one. It was sth like) Given an array, check all its subarrays. If their sum is 0, print 0, or 1 otherwise.
 <!-- ```f90 {.myclass linenos=table,linenostart=1,linenos=false} -->
@@ -77,8 +77,8 @@ end program
 ```
 </br>
 
-## <u>Lab 3 (Eular Method)</u>
-Eular Method formula for 1st Order ODE:
+## <u>Lab 3 (Euler Method)</u>
+Euler Method formula for 1st Order ODE:
 $$ \frac{dy}{dx}=f(x,y), \ \ \ y(x_0)=y_0$$
 $$\text{Iterate: }\ \ \hat{y}_{i+1}=y_i+h\cdot f(x_i,y_i)$$
 
