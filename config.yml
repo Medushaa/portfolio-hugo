@@ -189,22 +189,7 @@ params:
           Created posters and animated videos for the club's [social media page](https://www.facebook.com/BRACU.Robotics.Club).
 
           Was appointed as an instructor in a workshop for Introduction to Blender and 3D art.
-
-
-      # - job: "Junior Software Developer"
-      #   company: "Apple"
-      #   companyUrl: "https://example.com"
-      #   date: "Jan 2020 - Aug 2020"
-      #   info:
-      #     enable: false
-      #   featuredLink:
-      #     enable: true
-      #     url: "https://example.com"
-      #   content: |
-      #     I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-      #     - Lead backend developer for a product.
-      #     - Created a frontend design for a product.
+        
 
 
   # Education
@@ -271,37 +256,24 @@ params:
         featured:
           name: Site link
           link: https://three-js-pastel-site.netlify.app/
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
-        # links:
-        #   - icon: fa fa-envelope
-        #     url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-        #   - icon: fab fa-github
-        #     url: https://github.com/gurusabarish/hugo-profile
-        #   - icon: fab fa-twitter
-        #     url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+        badges:
+          - "Three.js"
+
 
       - title: Flutter App to Track expiry dates
-        content: where users can create an account and add items to their list. They can also create blogs in the app for others to see.
+        content: where users can create an account, add items to their list, and create public blogs.
           Flutter and Firebase was used to create this app for a course project.
-        image: /images/foodUm.jpg
+        image: /images/foodUm.png
         featured:
           name: Download Apk
           link: https://drive.google.com/file/d/1QMDyiGAVmVxDjnxOVxdc6Jn3YTl2ip6K/view?usp=sharing
-        # badges:
-        #   - "Django"
-        #   - "Bootstrap"
         links:
           - icon: fab fa-github
             url: https://github.com/Medushaa/cse471-project-flutter
 
       - title: Weekly Blender arts
-        content: |
+        content: | 
           I have been doing a challenge where I post one blender art every wednesday since the pandemic started. It helped me connect with other artists and encorage them to do the same.
-
-          Also beacuse of this, I was able to make a lot of new friends.
         image: /images/Portfolio/Borger.png
         featured:
           name: Behance Profile
@@ -309,6 +281,9 @@ params:
         links:
           - icon: fab fa-behance
             url: https://www.behance.net/masudarahman
+        badges:
+          - "3D models"
+          - "Animation"
 
 
       - title: Note sharing Website
@@ -316,9 +291,9 @@ params:
           It's a website where people can login and share notes as links or pdf. Also they can like and comment these posts.
           This was done with Laravel.
         image: /images/laravel.png
-        # featured:
-        #   name: Behance Profile
-        #   link: https://www.behance.net/masudarahman
+        badges:
+          - "Laravel"
+          - "MySQL"
         links:
           - icon: fab fa-github
             url: https://github.com/Medushaa/Note-sharing-site-CSE470
@@ -326,15 +301,26 @@ params:
       - title: Discord bot
         content: |
           A discord bot to go through assignment marks in csv file and DM the respective students. 
-          Also, can plot graphs. Coded in python.
-          
+          Also, can plot graphs. Coded in python.  
         image: /images/discord-bot.png
-        # featured:
-        #   name: Behance Profile
-        #   link: https://www.behance.net/masudarahman
+        badges:
+          - "Python"
         links:
           - icon: fab fa-github
             url: https://github.com/Medushaa/st-masu-bot
+
+      - title: ToDo Flutter App
+        content: Add tasks, delete tasks, crossout tasks, search task. Offline app, so firebase wasn't needed/
+        image: /images/tod_app.jpg
+        featured:
+          name: Download Apk
+          link: https://drive.google.com/file/d/1yWd6stJJN-zrlSXgWDrV-oeT7HuOAvCO/view?usp=sharing
+        badges:
+          - "Flutter"
+          - "Adroid App"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/Medushaa/ToDo-list-Flutter-App
 
 
 
