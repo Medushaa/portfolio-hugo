@@ -103,7 +103,8 @@ params:
     title: "Masuda."
     subtitle: "An unemployed student in search of a job :("
     content: "I like creating visually pleasing 3D art and websites for fun. Someone please hire me. Or as a tutor."
-    image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
+    # image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
+    image: "/images/cat.jpg"
     button:
       enable: true
       name: "Resume"
@@ -167,7 +168,8 @@ params:
 
           MAT123 (Calculus I)
           
-
+          CSE220 (Data Structures): Help students with Lab and grade
+          
       - job: "Private tutor for O and A level Students"
         company: "Private Tutor"
         date: "Sep 2018 - Present"

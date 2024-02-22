@@ -1,6 +1,6 @@
 ---
 title: "Inktober 2023 (Masu version)"
-date: 2023-10-30
+date: 2023-11-30
 draft: false
 author: "Masuda"
 tags:
