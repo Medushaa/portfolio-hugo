@@ -1,7 +1,7 @@
 ---
 title: "Masu Grades"
 date: 2023-12-24
-draft: false
+draft: true
 author: "Masuda"
 tags:
   - Grades
