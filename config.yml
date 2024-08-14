@@ -102,7 +102,7 @@ params:
     intro: "Hi, my name is"
     title: "Masuda."
     subtitle: "An unemployed student in search of a job :("
-    content: "I like creating visually pleasing 3D art and websites for fun. Someone please hire me. Or as a tutor."
+    content: "I like creating visually pleasing 3D art and websites/apps for fun. Someone please hire me. Also, I like doing maths."
     # image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
     image: "/images/cat.jpg"
     button:
@@ -129,18 +129,27 @@ params:
       
       Apart from drowning myself in artsy ambitions, i also enjoy tutoring students and involving myself in computer science related projects.
 
+      Here are some of the courses I enjoyed and is interested in: 
+        - Number Theory
+        - Complex Analysis
+        - Differential Equations
+        - Blockchain
+        - Operating system
+        - Data Science
+
     skills:
       enable: true
-      title: "Here are a few technologies I've been working with recently:"
+      title: "And here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
         - "JavaScript"
+        - "Python"
+        - "C"
+        - "Rust"
         - "Blender"
         - "Flutter"
-        - "Adobe Illustrator"
-        - "LaTeX"
-        - "Python"
+        - "LaTeX/Typst"
+        - "Github"
+        - "Laravel"
 
   # Experience
   experience:
@@ -169,6 +178,8 @@ params:
           MAT123 (Calculus I)
           
           CSE220 (Data Structures): Help students with Lab and grade
+
+          CSE449 (Parallel and High Performanace Computing (HPC))
           
       - job: "Private tutor for O and A level Students"
         company: "Private Tutor"
@@ -183,7 +194,7 @@ params:
 
       - job: "Senior Executive of IT dept at ROBU club"
         company: "ROBU"
-        date: "Sep 2020 - Present"
+        date: "Sep 2020 - Dec 2024"
         info:
           enable: false
           content: 
@@ -191,6 +202,15 @@ params:
           Created posters and animated videos for the club's [social media page](https://www.facebook.com/BRACU.Robotics.Club).
 
           Was appointed as an instructor in a workshop for Introduction to Blender and 3D art.
+
+      - job: "Head of 3D Modelling & Animation"
+        company: "Tateru"
+        date: "Jul 2024 - Present"
+        info:
+          enable: false
+          content: 
+        content: |
+          Making 3D stuffs in blender.
         
 
 
@@ -205,7 +225,7 @@ params:
           name: "BRAC University"
           url: "https://www.bracu.ac.bd/"
         date: "2020 - Present"
-        GPA: "3.9 out of 4.0"
+        GPA: "3.92 out of 4.0"
         featuredLink:
           enable: true
           name: "Courses taken and Results"
