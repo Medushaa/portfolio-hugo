@@ -108,8 +108,8 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: https://docs.google.com/document/d/18xdEILV8LsWfrV4pFT190crNUPccdL57/edit?usp=sharing&ouid=110105006431998175542&rtpof=true&sd=true
-      download: true 
+      url: "/images/Masu_CV.pdf"
+      download: false
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
