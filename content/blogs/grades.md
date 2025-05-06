@@ -74,6 +74,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
    | MAT324 | GRAPH THEORY                      | A | 4 | [Note Link](https://drive.google.com/file/d/1_YmBbm-K6LxmF1alviDUHFdWyxD4y_yQ/view?usp=sharing) |
    | MAT122 | ANALYTICAL & VECTOR GEOMETRY      | A+ | 4 | [Note Link](https://drive.google.com/file/d/1fcxoa4fb-QAxr9-VgniKRGoEY2UtVG6m/view?usp=sharing) |
    | MAT250 | MATHEMATICS LAB I                 | A+ | 4 | [Note Link](https://drive.google.com/file/d/1gcQbaCt9tsqLAtCLo0PLwxBB09SMW7eA/view?usp=sharing) |
+   | MAT400 | THESIS                             | A+ | 4 | - |
 
 
 ## <u>GenEd courses</u>
@@ -106,7 +107,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
         labels: ['A+ (4)', 'A (4)', 'A- (3.7)', 'B+ (3.3)', 'B (3)'],
         datasets: [{
             label: 'Grades',
-            data: [23, 37, 2, 3, 2],
+            data: [24, 37, 2, 3, 2],
             backgroundColor: [
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -141,7 +142,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
 
 <br>
 
-Total number of course: 62, 
+Total number of course: 63, 
 CGPA: 3.92
 
 <br>

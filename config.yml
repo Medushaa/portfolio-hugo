@@ -101,8 +101,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Masuda."
-    subtitle: "An unemployed student in search of a job :("
-    content: "I like creating visually pleasing 3D art and websites/apps for fun. Someone please hire me. Also, I like doing maths."
+    subtitle: "A game developer and a math nerd who likes to code sometimes ⸝♡"
+    content: "I like creating visually pleasing 3D art, games and websites/apps for fun. I'm down for commissions. Also, I like tutoring maths."
     # image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
     image: "/images/cat.jpg"
     button:
@@ -125,7 +125,7 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am currently undergraduate student doing a double major in Computer Science and Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations in Adobe illustrator and customising static websites.
+      I have recently completed my undergraduate degree in Computer Science and Engineering, with a second major in Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations in Adobe illustrator, customising static websites, playing and making games, crocheting and participating in game jams.
       
       Apart from drowning myself in artsy ambitions, i also enjoy tutoring students and involving myself in computer science related projects.
 
@@ -133,6 +133,7 @@ params:
         - Number Theory
         - Complex Analysis
         - Differential Equations
+        - Cryptography
         - Blockchain
         - Operating system
         - Data Science
@@ -141,6 +142,7 @@ params:
       enable: true
       title: "And here are a few technologies I've been working with recently:"
       items:
+        - Unity, Unreal, Godot
         - "JavaScript"
         - "Python"
         - "C"
@@ -150,12 +152,42 @@ params:
         - "LaTeX/Typst"
         - "Github"
         - "Laravel"
+        
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
+      - job: "Unreal Engine Assets Manager"
+        company: "Bakoony Ltd."
+        date: "Feb 2025 - Present"
+        info:
+          enable: false
+          content: 
+        content: |
+          Part of a big team working on a AA game. As an asset manager, my task involved
+          working with multiple tools like Character Creater 4, Blender, Marmoset Toolbag,
+          Substance Painter, Unreal Engine, etc. 
+
+          I also made my own CLI tools in python toqui ckly create/combine/fix texture maps
+          for the model to go with our game conventions.
+
+
+      - job: "Unity Game Dev Train and Hire"
+        company: "RiseUp Labs"
+        date: "Sep 2024 - Dec 2024"
+        info:
+          enable: false
+          content: 
+        content: |
+          3 months internship where I had to learn Unity and implement it. I made 2
+          HTML5 games in the internship period posted on itch.io and worked on a 
+          android educational app project with the trainer in a team of 5 people.
+
+          I was later was to join as Junior Unity Developer, which I declined.
+
+
       - job: "Student Tutor at BracU"
         company: "BracU ST"
         companyUrl: "https://www.bracu.ac.bd/"
@@ -180,6 +212,16 @@ params:
           CSE220 (Data Structures): Help students with Lab and grade
 
           CSE449 (Parallel and High Performanace Computing (HPC))
+
+      - job: "Head of 3D Modelling & Animation"
+        company: "Tateru"
+        date: "Jul 2024 - Present"
+        info:
+          enable: false
+          content: 
+        content: |
+          Making 3D models in blender for 3D printing.
+        
           
       - job: "Private tutor for O and A level Students"
         company: "Private Tutor"
@@ -203,14 +245,6 @@ params:
 
           Was appointed as an instructor in a workshop for Introduction to Blender and 3D art.
 
-      - job: "Head of 3D Modelling & Animation"
-        company: "Tateru"
-        date: "Jul 2024 - Present"
-        info:
-          enable: false
-          content: 
-        content: |
-          Making 3D stuffs in blender.
         
 
 
@@ -224,7 +258,7 @@ params:
         school:
           name: "BRAC University"
           url: "https://www.bracu.ac.bd/"
-        date: "2020 - Present"
+        date: "2020 - 2025"
         GPA: "3.92 out of 4.0"
         featuredLink:
           enable: true
@@ -272,6 +306,18 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - title: HTML5 games
+        content: A series of small games built in multiple different game engine/librariess including Unity, Unreal, Godot, Construct 3 and Raylib. Hosted on itch.io.
+
+        image: /images/itch-games.png
+        featured:
+          name: Itch.io page
+          link: https://masupasu.itch.io/
+        badges:
+          - "Games"
+          - "WebGL"
+
+
       - title: Website using Three.js
         content: A cute pastel website with moving 3D objects in the background that can be interacted with by scrolling.
         image: /images/threeJs.jpg
