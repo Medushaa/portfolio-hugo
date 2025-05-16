@@ -12,8 +12,8 @@ tags:
   - Rust
   - Mathematics
   - Euclidean Algorithm
-  - Extended Euclidean Algorithm
-  - Right to Left binary exponentiation method
+#   - Extended Euclidean Algorithm
+#   - Right to Left binary exponentiation method
 # image: /images/crying.png
 description: "Explaining the Maths behind RSA encyption and decryption by implementing it in Python and Rust"
 toc: false

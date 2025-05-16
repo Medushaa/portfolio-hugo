@@ -1,5 +1,5 @@
 ---
-title: "Storytime: Spring 23 semester break"
+title: "Semester Break Activities"
 date: 2023-05-24
 draft: false
 author: "Masuda"
