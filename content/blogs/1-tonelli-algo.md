@@ -1,5 +1,5 @@
 ---
-title: "Storytime: A quiz on Tonelli's Algorithm"
+title: "Tonelli's Algorithm"
 date: 2023-03-26T13:48:28+06:00
 draft: false
 author: "Masuda"
@@ -14,7 +14,7 @@ description: "A story about one of my Number theory quizes where we had to solve
 ---
 ```[If you are here just for the algorithms, skip to them from the "table of content"]```
 
-## <u>Story part</u>
+## <u>Storytime</u>
 <hr>
 
 This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some sadistic reason, uses the [<span style="color:blue">MIT lecture notes</span>](https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/lecture-notes/) as the main "textbook" and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place saturated with rich dumb kids who couldn't get a chance in public Universities. TwT
