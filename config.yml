@@ -191,7 +191,7 @@ params:
       - job: "Student Tutor at BracU"
         company: "BracU ST"
         companyUrl: "https://www.bracu.ac.bd/"
-        date: "Jan 2022 - present"
+        date: "Jan 2022 - Aug 2024"
         info:
           enable: false
         content: |
@@ -215,7 +215,7 @@ params:
 
       - job: "Head of 3D Modelling & Animation"
         company: "Tateru"
-        date: "Jul 2024 - Present"
+        date: "Jul 2024 - Sep 2024"
         info:
           enable: false
           content: 
@@ -258,8 +258,8 @@ params:
         school:
           name: "BRAC University"
           url: "https://www.bracu.ac.bd/"
-        date: "2020 - 2025"
-        GPA: "3.92 out of 4.0"
+        date: "2020 - 2024"
+        GPA: "3.93 out of 4.0"
         featuredLink:
           enable: true
           name: "Courses taken and Results"

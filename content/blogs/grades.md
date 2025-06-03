@@ -143,7 +143,7 @@ Courses taken at Brac University in CSE and Mathematics double major since Sprin
 <br>
 
 Total number of course: 63, 
-CGPA: 3.92
+CGPA: 3.93
 
 <br>
 
