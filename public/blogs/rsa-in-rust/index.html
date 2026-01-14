@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href=/images/cat.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:title" content="RSA implementation in Python and Rust" />
+<meta property="og:description" content="Explaining the Maths behind RSA encyption and decryption by implementing it in Python and Rust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/blogs/rsa-in-rust/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-05-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-05-16T00:00:00+00:00" /><meta property="og:site_name" content="Portfolio" />
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="RSA implementation in Python and Rust"/>
+<meta name="twitter:description" content="Explaining the Maths behind RSA encyption and decryption by implementing it in Python and Rust"/>
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+         
+        --font-size: 1rem;
+        --font-weight: 400;
+        --line-height: 1.5;
+        --text-align: left;
+    }
+</style>
+
+
+
+
+
+<meta name="description" content="Explaining the Maths behind RSA encyption and decryption by implementing it in Python and Rust">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+RSA implementation in Python and Rust | Masu Portfolio
+
+  </title>
+</head>
+
+<body class="light" onload="loading()">
+  
+  
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="//localhost:1313/">
+                
+                Portfolio
+                
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#about" aria-label="about">About</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#experience"
+                            aria-label="experience">Experience</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#education"
+                            aria-label="education">Education</a>
+                    </li>
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#projects"
+                            aria-label="projects">Projects</a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="//localhost:1313/#contact"
+                            aria-label="contact">Contact</a>
+                    </li>
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blogs" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+                
+                <div class="text-center">
+                    <button id="theme-toggle">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            
+                
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">RSA implementation in Python and Rust</h1>
+            <div class="text-center">
+              Masuda 
+              <small>|</small>
+              May 16, 2025
+            </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <p>RSA is an ancient Public-key encryption algorithm used to safely pass secret message from sender to receiver without the risk of anyone else having unauthorized access to the content of the message. It makes use of 2 asymmetric keys: <strong>Public key</strong> that is shared with everyone to encrypt a message and <strong>Private key</strong> that is kept secret to the user to decrypt messages addressed to him.</p>
+<p>The key generation step starts by randomly picking two prime numbers p and q. And then calculate these next integers from it:
+$$ n = p \times q $$
+$$ r = (p - 1)(q -1)$$
+$$ e = \text{a value relatively prime to }r$$
+$$ d = e^{-1}\ (\text{mod }\ r)$$</p>
+<p>Public key: (n, e), Private key: (n, d)</p>
+<p>Encryption of the message (<code>msg</code> is an integer) with the public key, gives the ciphertext (<code>ct</code>). Decryption with the private key, gives the message back. The proof for why it works is left as an exercise for the reader.</p>
+<p>$$ ct = \text{msg}^e\ (\text{mod }\ r) $$
+$$ \text{msg} = ct^d\ (\text{mod }\ r) $$</p>
+<p>For it to work, n has to be larger than <code>msg</code>. Otherwise the number will be wrapped, giving a wrong decrypted message.</p>
+<h1 id="rsa-implementation-in-python">RSA implementation in Python</h1>
+<p>First I used Python because it&rsquo;ll be easier. Just put the equations as is, and done!</p>
+<p>Starting with a user generating his key pair, before any transactions are initiated addressed to him:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_rsa_keys</span>(): 
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>randprime(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>    q <span style="color:#f92672">=</span> sympy<span style="color:#f92672">.</span>randprime(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">10000</span>)
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> p <span style="color:#f92672">*</span> q  
+</span></span><span style="display:flex;"><span>    r <span style="color:#f92672">=</span> (p <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (q <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>, r):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> gcd(i, r) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>: 
+</span></span><span style="display:flex;"><span>            e <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> pow(e, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, r) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n, e, d
+</span></span></code></pre></div><p>The public key <code>(n, e)</code> is made public to everyone. A sender will use this to encrypt each letter in the message with the above equations. Once received, only the the owner of this key will be able to decrypt the letters with his private key <code>(n, d)</code> and concat them to reform the message.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rsa_encrypt</span>(n: int, e: int, txt: str): <span style="color:#75715e">#by sender </span>
+</span></span><span style="display:flex;"><span>    ct <span style="color:#f92672">=</span> [pow(ord(c), e, n) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> txt] <span style="color:#75715e">#list for each letter</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Encrypted ciphertext: </span><span style="color:#e6db74">{</span>ct<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ct
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">rsa_decrypt</span>(n: int, d: int, ct: int): <span style="color:#75715e">#by receiver</span>
+</span></span><span style="display:flex;"><span>    mes <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(chr(pow(c, d, n)) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> ct)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Decrypted message: </span><span style="color:#e6db74">{</span>mes<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> mes
+</span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>n, e, d <span style="color:#f92672">=</span> generate_rsa_keys()
+</span></span><span style="display:flex;"><span>ct <span style="color:#f92672">=</span> rsa_encrypt(n, e, <span style="color:#e6db74">&#34;meow&#34;</span>) <span style="color:#75715e">#list</span>
+</span></span><span style="display:flex;"><span>rsa_decrypt(n, d, ct)
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>Private key (n,e) = (46684657,7)                                  
+Public key (n,d) = (46684657, 26668903)
+Encrypted ciphertext: [7027600, 26231322, 8679471, 30302896]
+Decrypted message: meow
+</code></pre><p>Doneeeee!</p>
+<h1 id="rsa-implementation-in-rust">RSA implementation in Rust</h1>
+<p>The above was pretty slow despite the key size being extremely small. Also we directly used the built-in functions like <code>pow</code>, <code>gcd</code> and <code>randprime</code>, which hide important algorithms that we could explore.</p>
+<p>So, lets do all that in Rust.</p>
+<h3 id="gcd-using-euclidean-algorithm">GCD using Euclidean Algorithm</h3>
+<p>GCD or the <strong>Greatest Common Divisor</strong> of two integers, <code>gcd(a, b)</code> can be calculated using a very cool simple algorithm called the <strong>Euclidean Algorithm</strong>. The steps are:</p>
+<ol>
+<li>If <code>a &gt; b</code>, switch <code>a</code> and <code>b</code></li>
+<li>If <code>a = 0</code>, return <code>b</code></li>
+<li>Since <code>a &gt; 0</code>, write <code>b = a * q + r</code>,  with 0 ≤ r &lt; a. (This <code>r</code> is basically <code>r = b % a</code>). Replace <code>(a, b)</code> with <code>(r, a)</code> and repeat.</li>
+</ol>
+<p>Implementing this in Rust:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">gcd</span>(<span style="color:#66d9ef">mut</span> a: <span style="color:#66d9ef">u64</span>, <span style="color:#66d9ef">mut</span> b: <span style="color:#66d9ef">u64</span>) -&gt; <span style="color:#66d9ef">u64</span> {
+</span></span><span style="display:flex;"><span>    assert!(a <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> b <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>); <span style="color:#75715e">//terminates if n or m is 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> b <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> b <span style="color:#f92672">&lt;</span> a { <span style="color:#75715e">//swap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">let</span> t <span style="color:#f92672">=</span> b; 
+</span></span><span style="display:flex;"><span>            b <span style="color:#f92672">=</span> a;
+</span></span><span style="display:flex;"><span>            a <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        b <span style="color:#f92672">=</span> b <span style="color:#f92672">%</span> a;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    a 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="extended-euclidean-algorithm">Extended Euclidean Algorithm</h3>
+<p><strong>Extended Euclidean Algorithm</strong> can efficiently find even the coefficients of the gcd diaphantine equation: <code>ax + by = gcd(a, b)</code>.</p>
+<p>It can be used to calculate the multiplicative inverse: $$a^{-1} \ \ (\text{mod}\ \ m)$$</p>
+<div style="text-align: center;">
+  <img src="\images\extended-eucleadian-algo.png" alt="image description" style="max-width: 55%; height: auto; margin-bottom: 1rem;">
+</div>
+<p>where, <code>q</code> is the quotient of dividing <code>r</code> with <code>r'</code>, (<code>q = r // r'</code>),
+and the next <code>r'</code> value is the reminder, (<code>r - q * r'</code>).</p>
+<p>If <code>t &lt; 0</code> , do <code>t = t + n</code>.</p>
+<p>Return <code>t'</code> , when <code>r' = 1</code> .</p>
+<p>Implementing this in Rust:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">mod_inverse</span>(a: <span style="color:#66d9ef">u64</span>, m: <span style="color:#66d9ef">u64</span>) -&gt; <span style="color:#66d9ef">u64</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> (<span style="color:#66d9ef">mut</span> t, <span style="color:#66d9ef">mut</span> new_t) <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0_</span><span style="color:#66d9ef">i64</span>, <span style="color:#ae81ff">1_</span><span style="color:#66d9ef">i64</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> (<span style="color:#66d9ef">mut</span> r, <span style="color:#66d9ef">mut</span> new_r) <span style="color:#f92672">=</span> (m <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i64</span>, a <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i64</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> new_r <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> q <span style="color:#f92672">=</span> r <span style="color:#f92672">/</span> new_r;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> temp_t <span style="color:#f92672">=</span> t <span style="color:#f92672">-</span> q <span style="color:#f92672">*</span> new_t;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> temp_r <span style="color:#f92672">=</span> r <span style="color:#f92672">-</span> q <span style="color:#f92672">*</span> new_r;
+</span></span><span style="display:flex;"><span>        t <span style="color:#f92672">=</span> new_t;
+</span></span><span style="display:flex;"><span>        new_t <span style="color:#f92672">=</span> temp_t;
+</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> new_r;
+</span></span><span style="display:flex;"><span>        new_r <span style="color:#f92672">=</span> temp_r;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> r <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span> }; <span style="color:#75715e">// No inverse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> { t <span style="color:#f92672">+=</span> m <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i64</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    t <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u64</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="checking-prime">Checking Prime</h3>
+<p>This code simply brute forces dividing the number with every number from 2 to it&rsquo;s square. If any of them is divisible, the number is not a prime.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">is_prime</span>(num: <span style="color:#66d9ef">u64</span>) -&gt; <span style="color:#66d9ef">bool</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>; 
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">..=</span>(num <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">f64</span>).sqrt() <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u64</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// divisible
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }   
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">true</span> 
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is extremely inefficient if the number becomes huge, which is required for RSA. Hence, the real RSA uses probabilistic tests for this.</p>
+<h3 id="algorithm-for-modular-exponents">Algorithm for Modular Exponents</h3>
+<p>To efficiently calulate <code>(num^exp % modulus)</code>, I used the <strong>Right to Left binary exponentiation method</strong>, which works by considering the binary representation of the exponent (<code>exp</code>).</p>
+<ol>
+<li>Start by setting the answer to 1 and reducing num to <code>num % modulus</code>.</li>
+<li>Iterate through each bit of exp from right to left by right shifting it (i.e. divide by 2). If the current bit is 1, update: <code>ans = (ans * num) % modulus</code>. In every iteration, square the num, i.e. <code>(num * num) % modulus</code>.</li>
+<li>Repeat until all bits of <code>exp</code> has been iterated through.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">modular_exponent</span>(<span style="color:#66d9ef">mut</span> num:<span style="color:#66d9ef">u64</span> ,<span style="color:#66d9ef">mut</span> exp:<span style="color:#66d9ef">u64</span> , modulus:<span style="color:#66d9ef">u64</span>) -&gt; <span style="color:#66d9ef">u64</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> exp <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">loop</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> exp <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> { <span style="color:#66d9ef">return</span> (ans <span style="color:#f92672">*</span> num) <span style="color:#f92672">%</span> modulus; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> exp <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> { <span style="color:#75715e">//binary check for if exp is even
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            num <span style="color:#f92672">=</span> (num <span style="color:#f92672">*</span> num) <span style="color:#f92672">%</span> modulus;
+</span></span><span style="display:flex;"><span>            exp <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">//right shift to next bit. exp=exp&gt;&gt;1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            ans <span style="color:#f92672">=</span> (ans <span style="color:#f92672">*</span> num) <span style="color:#f92672">%</span> modulus;
+</span></span><span style="display:flex;"><span>            exp <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="generating-the-two-keys">Generating the two keys</h3>
+<p>Similar to our implementation with Python, we&rsquo;ll randomly pick the two prime numbers p and q, and then calculate n, r, e (public key) and d (private key) using the above algorithms.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">generate_rsa_keys</span>() -&gt; <span style="color:#a6e22e">Keys</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rng <span style="color:#f92672">=</span> rand::thread_rng();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> p: <span style="color:#66d9ef">u64</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> q: <span style="color:#66d9ef">u64</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">loop</span> { 
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> rng.gen_range(<span style="color:#ae81ff">300</span><span style="color:#f92672">..</span><span style="color:#ae81ff">10000</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> is_prime(p) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">loop</span> {
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> rng.gen_range(<span style="color:#ae81ff">300</span><span style="color:#f92672">..</span><span style="color:#ae81ff">10000</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> is_prime(q) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> n: <span style="color:#66d9ef">u64</span> <span style="color:#f92672">=</span> p <span style="color:#f92672">*</span> q; <span style="color:#75715e">//biger than msg
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> r: <span style="color:#66d9ef">u64</span> <span style="color:#f92672">=</span> (p <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (q <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> e: <span style="color:#66d9ef">u64</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">..</span>r {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> gcd(i, r) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> {
+</span></span><span style="display:flex;"><span>            e <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> d <span style="color:#f92672">=</span> mod_inverse(e, r); 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Keys { n: (n), e: (e), d: (d) }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="encryprtion-and-decryption">Encryprtion and Decryption</h3>
+<p>The sender can now use the receiver&rsquo;s public key to encrypt a message (<code>txt</code>) into a list of encrypted numbers representing each letter in the message.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">rsa_encrypt</span>(n: <span style="color:#66d9ef">u64</span>, e: <span style="color:#66d9ef">u64</span>, txt: String) -&gt; Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u64</span><span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> ct <span style="color:#f92672">=</span> Vec::new();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> l <span style="color:#66d9ef">in</span> txt.chars() { 
+</span></span><span style="display:flex;"><span>        ct.push(modular_exponent((l <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u8</span>) <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u64</span>, e, n));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;Encrypted message: </span><span style="color:#e6db74">{:?}</span><span style="color:#e6db74">&#34;</span>, ct);
+</span></span><span style="display:flex;"><span>    ct
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Once the receiver, receives this encrypted message, they will try to decrypt it with their private key and retrive the original message. A small helper function was used to convert the u64 to u8 ascii, before making it a char.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Rust" data-lang="Rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">convert_u64_to_u8</span>(x: <span style="color:#66d9ef">u64</span>) -&gt; <span style="color:#66d9ef">u8</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">u8</span>::<span style="color:#66d9ef">MAX</span> <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u64</span> { <span style="color:#75715e">//is it bigger than u8?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        x <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">u8</span>
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        panic!(<span style="color:#e6db74">&#34;u64 to u8 failed&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">rsa_decrypt</span>(n: <span style="color:#66d9ef">u64</span>, d: <span style="color:#66d9ef">u64</span>, ct: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">u64</span><span style="color:#f92672">&gt;</span>) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> msg: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> Vec::new();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> ct {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> ascii <span style="color:#f92672">=</span> modular_exponent(i, d, n);
+</span></span><span style="display:flex;"><span>        msg.push(convert_u64_to_u8(ascii) <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">char</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    msg.iter().collect()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<p>This was a very silly way of implementing the RSA with u64 since it can be super easily broken. Rust&rsquo;s BigInt type instead of u64 could have been a better fit, also having built-in support for the algorithms being used. Regardless, I wanted to do it to get away with using simple naive algorithms like <code>is_prime(num)</code>.</p>
+<p>Here is the github link with the code for this: <a href="https://github.com/Medushaa/RSA-in-u64-Rust">[<span style="color:#00B5E2">link</span>]</a></p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/number-theory" target="_blank">Number Theory</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/computer-science" target="_blank">Computer Science</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/cryptography" target="_blank">Cryptography</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/rsa" target="_blank">RSA</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/rust" target="_blank">Rust</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/mathematics" target="_blank">Mathematics</a></li>
+              
+              <li class="list-inline-item"><a href="//localhost:1313/tags/euclidean-algorithm" target="_blank">Euclidean Algorithm</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=RSA%20implementation%20in%20Python%20and%20Rust&url=%2f%2flocalhost%3a1313%2fblogs%2frsa-in-rust%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=RSA%20implementation%20in%20Python%20and%20Rust: %2f%2flocalhost%3a1313%2fblogs%2frsa-in-rust%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=RSA%20implementation%20in%20Python%20and%20Rust&amp;body=Check out this site %2f%2flocalhost%3a1313%2fblogs%2frsa-in-rust%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "masu-portfolio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/rsa-in-rust/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="RSA implementation in Python and Rust">RSA implementation in …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>RSA is an ancient Public-key encryption algorithm used to safely pass secret message from sender to receiver without the risk of anyone else having unauthorized access to the content of the message. It makes use of 2 asymmetric keys: Public key that is shared with everyone to encrypt a message and …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 16, 2025</span>
+                    <a href="/blogs/rsa-in-rust/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/grades/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Masu Grades">Masu Grades</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Courses taken at Brac University in CSE and Mathematics double major since Spring 2020 till now: …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">December 24, 2023</span>
+                    <a href="/blogs/grades/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-3 shadow-sm">
+                    <a href="/blogs/inktober-2023/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Inktober 2023 (Masu version)">Inktober 2023 (Masu …</h5>
+                    </a>
+                    <div class="card-text secondary-font">
+                        <p>Followed the official Inktober prompts for 20 Days. And it&rsquo;s &ldquo;Masu Version&rdquo; coz I didn&rsquo;t Ink XDD. I don&rsquo;t know how to.
+(Don&rsquo;t really feel like typing much. Here are the outcomes):
+Day 1 to 9 Day 10 to 20 Day 21 to 30 I gave up. It got boring also, assignments …</p>
+                    </div>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">November 30, 2023</span>
+                    <a href="/blogs/inktober-2023/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div><div class="text-center pt-2">
+    
+    <span class="px-1">
+        <a href="https://github.com/Medushaa" aria-label="github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
+                <path
+                    d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
+
+                <metadata>
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Description about="https://iconscout.com/legal#licenses"
+                            dc:title="Github, Online, Project, Hosting, Square"
+                            dc:description="Github, Online, Project, Hosting, Square" dc:publisher="Iconscout"
+                            dc:date="2016-12-14" dc:format="image/svg+xml" dc:language="en">
+                            <dc:creator>
+                                <rdf:Bag>
+                                    <rdf:li>Font Awesome</rdf:li>
+                                </rdf:Bag>
+                            </dc:creator>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </metadata>
+            </svg>
+        </a>
+    </span>
+    
+
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/masuda-rahman-fatima-2a694b208/" aria-label="linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
+                viewBox="0 0 512 512">
+                <rect width="512" height="512" fill="#0077b5" rx="15%" />
+                <circle cx="142" cy="138" r="37" />
+                <path stroke="#fff" stroke-width="66" d="M244 194v198M142 194v198" />
+                <path d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+            </svg>
+        </a>
+    </span>
+    
+
+    
+
+    
+    <a href="https://www.instagram.com/masuda_masu/" aria-label="instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fd5" />
+                <stop offset=".328" stop-color="#ff543f" />
+                <stop offset=".348" stop-color="#fc5245" />
+                <stop offset=".504" stop-color="#e64771" />
+                <stop offset=".643" stop-color="#d53e91" />
+                <stop offset=".761" stop-color="#cc39a4" />
+                <stop offset=".841" stop-color="#c837ab" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813"
+                gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#4168c9" />
+                <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+            </radialGradient>
+            <path fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z" />
+            <path fill="#fff"
+                d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z" />
+            <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+            <path fill="#fff"
+                d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z" />
+        </svg>
+    </a>
+    
+
+    
+    <a href="https://www.facebook.com/masu.masuda.masu/" aria-label="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+            <path fill="#3F51B5"
+                d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z" />
+            <path fill="#FFF"
+                d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z" />
+        </svg>
+    </a>
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="//localhost:1313/" title="Masu Portfolio">
+                    <img alt="Footer logo" src=""
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+<script>
+    let loadingIcons;
+
+    function loading() {
+        myVar = setTimeout(showPage, 100);
+    }
+
+    function showPage() {
+        try{
+            document.getElementById("loading-icons").style.display = "block";
+        } catch(err) {}
+    }
+</script></body>
+
+</html>

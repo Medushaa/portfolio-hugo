@@ -102,7 +102,7 @@ params:
     intro: "Hi, my name is"
     title: "Masuda."
     subtitle: "A game developer and a math nerd who likes to code sometimes ⸝♡"
-    content: "I like creating visually pleasing 3D art, games and websites/apps for fun. I'm down for commissions. Also, I like tutoring maths."
+    content: "I like creating visually pleasing 3D art, games and websites/apps for fun. Also, I love puzzles and cryptography."
     # image: https://nitter.net/pic/orig/media%2FFP6K8NyaUAQNmRn.jpg
     image: "/images/cat.jpg"
     button:
@@ -125,7 +125,7 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I have recently completed my undergraduate degree in Computer Science and Engineering, with a second major in Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations in Adobe illustrator, customising static websites, playing and making games, crocheting and participating in game jams.
+      I am cuurent a MMath Computer Science student at the University of Waterloo under the CrySP lab. I did my undergraduate degree in Computer Science and Engineering, with a second major in Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations, customising static websites, playing and making games, crocheting, participating in game jams and reading about Elliptic curves.
       
       Apart from drowning myself in artsy ambitions, i also enjoy tutoring students and involving myself in computer science related projects.
 
@@ -151,7 +151,6 @@ params:
         - "Flutter"
         - "LaTeX/Typst"
         - "Github"
-        - "Laravel"
         
 
   # Experience
@@ -161,7 +160,7 @@ params:
     items:
       - job: "Unreal Engine Assets Manager"
         company: "Bakoony Ltd."
-        date: "Feb 2025 - Present"
+        date: "Feb 2025 - Nov 2025"
         info:
           enable: false
           content: 
@@ -170,8 +169,10 @@ params:
           working with multiple tools like Character Creater 4, Blender, Marmoset Toolbag,
           Substance Painter, Unreal Engine, etc. 
 
-          I also made my own CLI tools in python toqui ckly create/combine/fix texture maps
-          for the model to go with our game conventions.
+          I also made my own CLI tools in python to quickly create/combine/fix texture maps
+          for the model to go with our game conventions. Used blueprints to create NPC characters and icon generators.
+
+          I was also training to be a C++ programmer in unreal engine having finished three courses of over 70 hours on multiplayer shooter and working with the online subsystem.
 
 
       - job: "Unity Game Dev Train and Hire"
@@ -254,6 +255,15 @@ params:
     # title: "Custom Name"
     # index: true
     items:
+      - title: "MMath in Computer Science"
+        school:
+          name: "University of Waterloo"
+          url: ""
+        date: "2026 - 2028"
+        GPA: "-- out of 4.0"
+        content: |-
+          Under Professor Ian Goldberg as part of the CrySP lab (Cryptography, Secuirity and Privacy)
+
       - title: "Bachelor of Science in Computer Science and Mathematics"
         school:
           name: "BRAC University"
