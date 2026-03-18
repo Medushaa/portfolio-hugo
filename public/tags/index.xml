@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Masu Portfolio</title>
+    <link>//localhost:36127/tags/</link>
+    <description>Recent content in Tags on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computer Science</title>
+      <link>//localhost:36127/tags/computer-science/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cryptography</title>
+      <link>//localhost:36127/tags/cryptography/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Euclidean Algorithm</title>
+      <link>//localhost:36127/tags/euclidean-algorithm/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/euclidean-algorithm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathematics</title>
+      <link>//localhost:36127/tags/mathematics/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Number Theory</title>
+      <link>//localhost:36127/tags/number-theory/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/number-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RSA</title>
+      <link>//localhost:36127/tags/rsa/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/rsa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>//localhost:36127/tags/rust/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BracU</title>
+      <link>//localhost:36127/tags/bracu/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/bracu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grades</title>
+      <link>//localhost:36127/tags/grades/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/grades/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ball Point Pen</title>
+      <link>//localhost:36127/tags/ball-point-pen/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/ball-point-pen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blender</title>
+      <link>//localhost:36127/tags/blender/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/blender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infinity Painter</title>
+      <link>//localhost:36127/tags/infinity-painter/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/infinity-painter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inktober</title>
+      <link>//localhost:36127/tags/inktober/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/inktober/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fortran</title>
+      <link>//localhost:36127/tags/fortran/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/fortran/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Numerical Analysis</title>
+      <link>//localhost:36127/tags/numerical-analysis/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/numerical-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crochet</title>
+      <link>//localhost:36127/tags/crochet/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/crochet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Godot</title>
+      <link>//localhost:36127/tags/godot/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/godot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inifinity Painter</title>
+      <link>//localhost:36127/tags/inifinity-painter/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/tags/inifinity-painter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Storytime</title>
+      <link>//localhost:36127/tags/storytime/</link>
+      <pubDate>Sun, 26 Mar 2023 13:48:28 +0600</pubDate>
+      <guid>//localhost:36127/tags/storytime/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tonelli&#39;s Algorithm</title>
+      <link>//localhost:36127/tags/tonellis-algorithm/</link>
+      <pubDate>Sun, 26 Mar 2023 13:48:28 +0600</pubDate>
+      <guid>//localhost:36127/tags/tonellis-algorithm/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crochet on Masu Portfolio</title>
+    <link>//localhost:36127/tags/crochet/</link>
+    <description>Recent content in Crochet on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/crochet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Semester Break Activities</title>
+      <link>//localhost:36127/blogs/semester-break/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/semester-break/</guid>
+      <description>The begining of this semester break was kinda awkward this time because one the faculties gave me the wrong grade and without my correct grade published, I wasn&amp;rsquo;t really feeling like the semester has truely ended.&#xA;Anyways, I&amp;rsquo;ll keep it short. :zap:&#xA;I don&amp;rsquo;t have many frends to go on hangouts for the break. So, instead I made a list of things I want to do and try before the new semester starts.</description>
+    </item>
+  </channel>
+</rss>

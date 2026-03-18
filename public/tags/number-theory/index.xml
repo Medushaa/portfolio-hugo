@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Number Theory on Masu Portfolio</title>
+    <link>//localhost:36127/tags/number-theory/</link>
+    <description>Recent content in Number Theory on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/number-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSA implementation in Python and Rust</title>
+      <link>//localhost:36127/blogs/rsa-in-rust/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/rsa-in-rust/</guid>
+      <description>RSA is an ancient Public-key encryption algorithm used to safely pass secret message from sender to receiver without the risk of anyone else having unauthorized access to the content of the message. It makes use of 2 asymmetric keys: Public key that is shared with everyone to encrypt a message and Private key that is kept secret to the user to decrypt messages addressed to him.&#xA;The key generation step starts by randomly picking two prime numbers p and q.</description>
+    </item>
+    <item>
+      <title>Tonelli&#39;s Algorithm</title>
+      <link>//localhost:36127/blogs/1-tonelli-algo/</link>
+      <pubDate>Sun, 26 Mar 2023 13:48:28 +0600</pubDate>
+      <guid>//localhost:36127/blogs/1-tonelli-algo/</guid>
+      <description>[If you are here just for the algorithms, skip to them from the &amp;quot;table of content&amp;quot;]&#xA;Storytime This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some sadistic reason, uses the MIT lecture notes as the main &amp;ldquo;textbook&amp;rdquo; and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place saturated with rich dumb kids who couldn&amp;rsquo;t get a chance in public Universities.</description>
+    </item>
+  </channel>
+</rss>

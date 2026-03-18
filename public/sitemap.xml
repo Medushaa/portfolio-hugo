@@ -2,96 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/blogs/</loc>
+    <loc>//localhost:36127/blogs/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/computer-science/</loc>
+    <loc>//localhost:36127/tags/computer-science/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/cryptography/</loc>
+    <loc>//localhost:36127/tags/cryptography/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/euclidean-algorithm/</loc>
+    <loc>//localhost:36127/tags/euclidean-algorithm/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>//localhost:36127/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/mathematics/</loc>
+    <loc>//localhost:36127/tags/mathematics/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/number-theory/</loc>
+    <loc>//localhost:36127/tags/number-theory/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/rsa/</loc>
+    <loc>//localhost:36127/tags/rsa/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/rsa-in-rust/</loc>
+    <loc>//localhost:36127/blogs/rsa-in-rust/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/rust/</loc>
+    <loc>//localhost:36127/tags/rust/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>//localhost:36127/tags/</loc>
     <lastmod>2025-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/bracu/</loc>
+    <loc>//localhost:36127/tags/bracu/</loc>
     <lastmod>2023-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/grades/</loc>
+    <loc>//localhost:36127/tags/grades/</loc>
     <lastmod>2023-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/grades/</loc>
+    <loc>//localhost:36127/blogs/grades/</loc>
     <lastmod>2023-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ball-point-pen/</loc>
+    <loc>//localhost:36127/tags/ball-point-pen/</loc>
     <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/blender/</loc>
+    <loc>//localhost:36127/tags/blender/</loc>
     <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/infinity-painter/</loc>
+    <loc>//localhost:36127/tags/infinity-painter/</loc>
     <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/inktober/</loc>
+    <loc>//localhost:36127/tags/inktober/</loc>
     <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/inktober-2023/</loc>
+    <loc>//localhost:36127/blogs/inktober-2023/</loc>
     <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/fortran/</loc>
+    <loc>//localhost:36127/tags/fortran/</loc>
     <lastmod>2023-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/z-fortran-tales/</loc>
+    <loc>//localhost:36127/blogs/z-fortran-tales/</loc>
     <lastmod>2023-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/numerical-analysis/</loc>
+    <loc>//localhost:36127/tags/numerical-analysis/</loc>
     <lastmod>2023-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/crochet/</loc>
+    <loc>//localhost:36127/tags/crochet/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/godot/</loc>
+    <loc>//localhost:36127/tags/godot/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/inifinity-painter/</loc>
+    <loc>//localhost:36127/tags/inifinity-painter/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/semester-break/</loc>
+    <loc>//localhost:36127/blogs/semester-break/</loc>
     <lastmod>2023-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/storytime/</loc>
+    <loc>//localhost:36127/tags/storytime/</loc>
     <lastmod>2023-03-26T13:48:28+06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/tonellis-algorithm/</loc>
+    <loc>//localhost:36127/tags/tonellis-algorithm/</loc>
     <lastmod>2023-03-26T13:48:28+06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blogs/1-tonelli-algo/</loc>
+    <loc>//localhost:36127/blogs/1-tonelli-algo/</loc>
     <lastmod>2023-03-26T13:48:28+06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/gallery/</loc>
-    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
+    <loc>//localhost:36127/gallery/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>//localhost:36127/categories/</loc>
   </url>
 </urlset>

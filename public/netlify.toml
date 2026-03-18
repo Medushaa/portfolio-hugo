@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://masu-portfolio.netlify.app/*"
+  to = "https://masupasu.com/:splat"
+  status = 301
+  force = true

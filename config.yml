@@ -112,10 +112,10 @@ params:
       download: false
     socialLinks:
       fontAwesomeIcons:
+        - icon: fab fa-itch-io
+          url: https://masupasu.itch.io/
         - icon: fab fa-github
           url: https://github.com/Medushaa
-        - icon: fab fa-instagram
-          url: https://www.instagram.com/masuda_masu/
         - icon: fab fa-behance
           url: https://www.behance.net/masudarahman
 
@@ -125,7 +125,7 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am cuurent a MMath Computer Science student at the University of Waterloo under the CrySP lab. I did my undergraduate degree in Computer Science and Engineering, with a second major in Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations, customising static websites, playing and making games, crocheting, participating in game jams and reading about Elliptic curves.
+      I am cuurent a MMath Computer Science student at the University of Waterloo under the CrySP lab. I did my undergraduate degree in Computer Science and Engineering, with a second major in Mathematics in Bangladesh. My hobbies include creating cute models in Blender 3D, illustrations, playing and making games, crocheting, participating in game jams and creating pretty notes from interesting topics I learn about. (Check out my Grades blog)
       
       Apart from drowning myself in artsy ambitions, i also enjoy tutoring students and involving myself in computer science related projects.
 
@@ -145,7 +145,7 @@ params:
         - Unity, Unreal, Godot
         - "JavaScript"
         - "Python"
-        - "C"
+        - "C/C++"
         - "Rust"
         - "Blender"
         - "Flutter"
@@ -262,7 +262,7 @@ params:
         date: "2026 - 2028"
         GPA: "-- out of 4.0"
         content: |-
-          Under Professor Ian Goldberg as part of the CrySP lab (Cryptography, Secuirity and Privacy)
+          Part of the CrySP lab (Cryptography, Secuirity and Privacy)
 
       - title: "Bachelor of Science in Computer Science and Mathematics"
         school:

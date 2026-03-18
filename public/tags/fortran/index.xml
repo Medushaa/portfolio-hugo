@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fortran on Masu Portfolio</title>
+    <link>//localhost:36127/tags/fortran/</link>
+    <description>Recent content in Fortran on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/fortran/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fortran_Tales = .gone_wrong.</title>
+      <link>//localhost:36127/blogs/z-fortran-tales/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/z-fortran-tales/</guid>
+      <description>Lab 1 (Pascal Triangle) Bad bad. It was bad. It was soooo bad that I don&amp;rsquo;t even remember anyth from Lab 1, except &amp;ldquo;Hello world&amp;rdquo;? Here&amp;rsquo;s a link to a nice introductory tutorial on Fortran if you too got unlucky enough in your undergrad life.&#xA;And then we were given an home task to ouput a Pascal Triangle (using Binomial coefficients):&#xA;program pascal implicit none integer::i,j,c do i=1,7 c = 1 do j=1,i write(*, &amp;#34;(I10)&amp;#34;, advance=&amp;#34;no&amp;#34;) c c = (c * (i - j)) / j end do write(*,*) end do end program Output:</description>
+    </item>
+  </channel>
+</rss>

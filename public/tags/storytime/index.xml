@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storytime on Masu Portfolio</title>
+    <link>//localhost:36127/tags/storytime/</link>
+    <description>Recent content in Storytime on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Mar 2023 13:48:28 +0600</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/storytime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tonelli&#39;s Algorithm</title>
+      <link>//localhost:36127/blogs/1-tonelli-algo/</link>
+      <pubDate>Sun, 26 Mar 2023 13:48:28 +0600</pubDate>
+      <guid>//localhost:36127/blogs/1-tonelli-algo/</guid>
+      <description>[If you are here just for the algorithms, skip to them from the &amp;quot;table of content&amp;quot;]&#xA;Storytime This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some sadistic reason, uses the MIT lecture notes as the main &amp;ldquo;textbook&amp;rdquo; and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place saturated with rich dumb kids who couldn&amp;rsquo;t get a chance in public Universities.</description>
+    </item>
+  </channel>
+</rss>

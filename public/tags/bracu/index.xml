@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BracU on Masu Portfolio</title>
+    <link>//localhost:36127/tags/bracu/</link>
+    <description>Recent content in BracU on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/tags/bracu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Masu Grades</title>
+      <link>//localhost:36127/blogs/grades/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/grades/</guid>
+      <description>Courses taken at Brac University in CSE and Mathematics double major since Spring 2020 till now: &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..&#xA;CSE courses Course Code Course Name Grade CGPA Masu Notes CSE110 PROGRAMMING LANGUAGE I A 4 Note Link CSE230 DISCRETE MATHEMATICS A 4 Note Link CSE111 PROGRAMMING LANGUAGE-II A 4 Note Link CSE220 DATA STRUCTURES A 4 Note Link CSE221 ALGORITHMS A 4 Note Link CSE250 CIRCUITS AND ELECTRONICS A+ 4 Note Link CSE260 DIGITAL LOGIC DESIGN A 4 Note Link CSE251 ELECTRONIC DEVICES AND CIRCUIT&amp;hellip; A+ 4 Note Link CSE320 DATA COMMUNICATIONS A 4 Note Link CSE331 AUTOMATA AND COMPUTABILITY A 4 Note Link CSE370 DATABASE SYSTEMS A+ 4 Note Link CSE420 COMPILER DESIGN A 4 Note Link CSE471 SYSTEM ANALYSIS AND DESIGN A 4 Note Link CSE330 NUMERICAL METHODS A+ 4 Note Link CSE340 COMPUTER ARCHITECTURE A 4 Note Link CSE341 MICROPROCESSOR A 4 Note Link CSE422 ARTIFICIAL INTELLIGE A 4 Note Link CSE350 DIGITAL ELECTRONICS AND PULSE&amp;hellip; A+ 4 Note Link CSE360 COMPUTER INTERFACING A 4 Note Link CSE423 COMPUTER GRAPHICS A+ 4 Note Link CSE470 SOFTWARE ENGINEERING A 4 Note Link CSE437 DATA SCIENCE A+ 4 Note Link CSE460 VLSI DESIGN A+ 4 Note Link CSE461 INTRODUCTION TO ROBOTICS A+ 4 Note Link CSE321 OPERATING SYSTEMS A+ 4 Note Link CSE421 COMPUTER NETWORKS A 4 Note Link MAT courses Course Code Course Name Grade CGPA Masu Notes MAT110 MATHEMATICS I: DIFFERENTIAL CA&amp;hellip; A 4 Note Link MAT123 CALCULUS I A 4 Note Link MAT222 DIFFERENTIAL EQUATIONS I A 4 Note Link MAT212 LINEAR ALGEBRA A+ 4 Note Link MAT322 DIFFERENTIAL EQUATIONS II A+ 4 Note Link MAT211 CALCULUS II A 4 Note Link MAT221 REAL ANALYSIS I A 4 Sir&amp;rsquo;s Note MAT316 OPERATIONS RESEARCH I A 4 Note Link MAT215 MATHEMATICS III: COMPLEX VARIA&amp;hellip; A+ 4 Note Link MAT311 ABSTRACT ALGEBRA A 4 Note Link MAT325 MATHEMATICAL METHODS A- 3.</description>
+    </item>
+    <item>
+      <title>Fortran_Tales = .gone_wrong.</title>
+      <link>//localhost:36127/blogs/z-fortran-tales/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/z-fortran-tales/</guid>
+      <description>Lab 1 (Pascal Triangle) Bad bad. It was bad. It was soooo bad that I don&amp;rsquo;t even remember anyth from Lab 1, except &amp;ldquo;Hello world&amp;rdquo;? Here&amp;rsquo;s a link to a nice introductory tutorial on Fortran if you too got unlucky enough in your undergrad life.&#xA;And then we were given an home task to ouput a Pascal Triangle (using Binomial coefficients):&#xA;program pascal implicit none integer::i,j,c do i=1,7 c = 1 do j=1,i write(*, &amp;#34;(I10)&amp;#34;, advance=&amp;#34;no&amp;#34;) c c = (c * (i - j)) / j end do write(*,*) end do end program Output:</description>
+    </item>
+  </channel>
+</rss>

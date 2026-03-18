@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Masu Portfolio</title>
+    <link>//localhost:36127/blogs/</link>
+    <description>Recent content in Blogs on Masu Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:36127/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSA implementation in Python and Rust</title>
+      <link>//localhost:36127/blogs/rsa-in-rust/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/rsa-in-rust/</guid>
+      <description>RSA is an ancient Public-key encryption algorithm used to safely pass secret message from sender to receiver without the risk of anyone else having unauthorized access to the content of the message. It makes use of 2 asymmetric keys: Public key that is shared with everyone to encrypt a message and Private key that is kept secret to the user to decrypt messages addressed to him.&#xA;The key generation step starts by randomly picking two prime numbers p and q.</description>
+    </item>
+    <item>
+      <title>Masu Grades</title>
+      <link>//localhost:36127/blogs/grades/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/grades/</guid>
+      <description>Courses taken at Brac University in CSE and Mathematics double major since Spring 2020 till now: &amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..&#xA;CSE courses Course Code Course Name Grade CGPA Masu Notes CSE110 PROGRAMMING LANGUAGE I A 4 Note Link CSE230 DISCRETE MATHEMATICS A 4 Note Link CSE111 PROGRAMMING LANGUAGE-II A 4 Note Link CSE220 DATA STRUCTURES A 4 Note Link CSE221 ALGORITHMS A 4 Note Link CSE250 CIRCUITS AND ELECTRONICS A+ 4 Note Link CSE260 DIGITAL LOGIC DESIGN A 4 Note Link CSE251 ELECTRONIC DEVICES AND CIRCUIT&amp;hellip; A+ 4 Note Link CSE320 DATA COMMUNICATIONS A 4 Note Link CSE331 AUTOMATA AND COMPUTABILITY A 4 Note Link CSE370 DATABASE SYSTEMS A+ 4 Note Link CSE420 COMPILER DESIGN A 4 Note Link CSE471 SYSTEM ANALYSIS AND DESIGN A 4 Note Link CSE330 NUMERICAL METHODS A+ 4 Note Link CSE340 COMPUTER ARCHITECTURE A 4 Note Link CSE341 MICROPROCESSOR A 4 Note Link CSE422 ARTIFICIAL INTELLIGE A 4 Note Link CSE350 DIGITAL ELECTRONICS AND PULSE&amp;hellip; A+ 4 Note Link CSE360 COMPUTER INTERFACING A 4 Note Link CSE423 COMPUTER GRAPHICS A+ 4 Note Link CSE470 SOFTWARE ENGINEERING A 4 Note Link CSE437 DATA SCIENCE A+ 4 Note Link CSE460 VLSI DESIGN A+ 4 Note Link CSE461 INTRODUCTION TO ROBOTICS A+ 4 Note Link CSE321 OPERATING SYSTEMS A+ 4 Note Link CSE421 COMPUTER NETWORKS A 4 Note Link MAT courses Course Code Course Name Grade CGPA Masu Notes MAT110 MATHEMATICS I: DIFFERENTIAL CA&amp;hellip; A 4 Note Link MAT123 CALCULUS I A 4 Note Link MAT222 DIFFERENTIAL EQUATIONS I A 4 Note Link MAT212 LINEAR ALGEBRA A+ 4 Note Link MAT322 DIFFERENTIAL EQUATIONS II A+ 4 Note Link MAT211 CALCULUS II A 4 Note Link MAT221 REAL ANALYSIS I A 4 Sir&amp;rsquo;s Note MAT316 OPERATIONS RESEARCH I A 4 Note Link MAT215 MATHEMATICS III: COMPLEX VARIA&amp;hellip; A+ 4 Note Link MAT311 ABSTRACT ALGEBRA A 4 Note Link MAT325 MATHEMATICAL METHODS A- 3.</description>
+    </item>
+    <item>
+      <title>Inktober 2023 (Masu version)</title>
+      <link>//localhost:36127/blogs/inktober-2023/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/inktober-2023/</guid>
+      <description>Followed the official Inktober prompts for 20 Days. And it&amp;rsquo;s &amp;ldquo;Masu Version&amp;rdquo; coz I didn&amp;rsquo;t Ink XDD. I don&amp;rsquo;t know how to.&#xA;(Don&amp;rsquo;t really feel like typing much. Here are the outcomes):&#xA;Day 1 to 9 Day 10 to 20 Day 21 to 30 I gave up. It got boring also, assignments started piling up.&#xA;----------The End----------</description>
+    </item>
+    <item>
+      <title>Fortran_Tales = .gone_wrong.</title>
+      <link>//localhost:36127/blogs/z-fortran-tales/</link>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/z-fortran-tales/</guid>
+      <description>Lab 1 (Pascal Triangle) Bad bad. It was bad. It was soooo bad that I don&amp;rsquo;t even remember anyth from Lab 1, except &amp;ldquo;Hello world&amp;rdquo;? Here&amp;rsquo;s a link to a nice introductory tutorial on Fortran if you too got unlucky enough in your undergrad life.&#xA;And then we were given an home task to ouput a Pascal Triangle (using Binomial coefficients):&#xA;program pascal implicit none integer::i,j,c do i=1,7 c = 1 do j=1,i write(*, &amp;#34;(I10)&amp;#34;, advance=&amp;#34;no&amp;#34;) c c = (c * (i - j)) / j end do write(*,*) end do end program Output:</description>
+    </item>
+    <item>
+      <title>Semester Break Activities</title>
+      <link>//localhost:36127/blogs/semester-break/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:36127/blogs/semester-break/</guid>
+      <description>The begining of this semester break was kinda awkward this time because one the faculties gave me the wrong grade and without my correct grade published, I wasn&amp;rsquo;t really feeling like the semester has truely ended.&#xA;Anyways, I&amp;rsquo;ll keep it short. :zap:&#xA;I don&amp;rsquo;t have many frends to go on hangouts for the break. So, instead I made a list of things I want to do and try before the new semester starts.</description>
+    </item>
+    <item>
+      <title>Tonelli&#39;s Algorithm</title>
+      <link>//localhost:36127/blogs/1-tonelli-algo/</link>
+      <pubDate>Sun, 26 Mar 2023 13:48:28 +0600</pubDate>
+      <guid>//localhost:36127/blogs/1-tonelli-algo/</guid>
+      <description>[If you are here just for the algorithms, skip to them from the &amp;quot;table of content&amp;quot;]&#xA;Storytime This week I had a quiz on Number theory and as always i waited till the last day before the quiz to start studying for it. Our teacher for some sadistic reason, uses the MIT lecture notes as the main &amp;ldquo;textbook&amp;rdquo; and also covers two entire lectures in a day. Mind you, we are not students of MIT with the giga brains but, just some struggling students in a private university which is known as the place saturated with rich dumb kids who couldn&amp;rsquo;t get a chance in public Universities.</description>
+    </item>
+  </channel>
+</rss>
